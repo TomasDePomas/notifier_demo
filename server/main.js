@@ -7,5 +7,5 @@
 import { Meteor } from 'meteor/meteor';
 
 Meteor.startup(() => {
-    Notifier.GCMAPIKey = "AIzaSyDbIeTazGBiYZNFq-p_Mxh9tBzfE9adUcg";
+    Notifier.GCMAPIKey = "<ADD API KEY HERE>";
 });
