@@ -1,0 +1,64 @@
+<head>
+    <title>Notifier Example</title>
+</head>
+
+<body>
+
+    <div>
+        <h3>Step 1:</h3>
+
+        <p>
+            Sign in to your notification using the accounts-password:
+        </p>
+        {{>loginButtons}}
+        <!-- buttons from the accounts-ui package -->
+    </div>
+
+    <hr>
+
+    {{#if userAvailable}}
+    <!-- this example is simplified, to send a message to the current user only. -->
+
+    <div>
+        <h3>Step 2:</h3>
+
+        <p>
+            Enable desktop notifications for this user:
+        </p>
+        {{>notifierToggle}}
+        <!-- this includes a toggle to enable/dissable notifications for the current user, included from the notifier package -->
+        <!-- add this in your user menu or profile settings -->
+    </div>
+
+    <hr>
+
+    <div>
+        <h3>Step 2.5:</h3>
+
+        <p>
+            Check if the notifications are available for this browser and no errors have occurred:
+        </p>
+
+        <div style="width: 200px">
+            {{>notifierStatus}}
+            <!-- this includes a text area displaying the status of the notification settings, included from the notifier package -->
+        </div>
+    </div>
+
+    <hr>
+
+    <div>
+        <h3>Step 3:</h3>
+        <p>
+            Send a test notification!
+        </p>
+        <button>Click to send notification</button>
+    </div>
+
+
+    {{else}}
+    <p>
+        You need an active user for step 2 and 3
+    </p>
+    {{/if}}
+</body>

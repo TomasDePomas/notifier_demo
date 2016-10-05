@@ -1,0 +1,10 @@
+{
+  "name": "notifier_example",
+  "private":false,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "meteor-node-stubs": "~0.2.0"
+  }
+}
